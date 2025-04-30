@@ -3,7 +3,7 @@
 
 .search{
     flex-grow: 1;
-    padding: rem(4) rem(4) rem(4) rem(24);
+    padding: rem(4);
     display: flex;
     border-radius: rem(8);
     border: 1px solid rgba(72, 136, 255, 0.2);
@@ -16,9 +16,11 @@
     }
 
     & input:first-child{ 
+        padding-left: rem(20);
         flex-grow: 1;
 
         color: var(--dark);
+        line-height: normal;
         border: none;
 
         &::placeholder{
@@ -27,15 +29,6 @@
         }
 
         outline: none;
-
-        position: relative;
-        &::before{
-            content: '';
-            position: absolute;
-            left: rem(-24);
-            width: calc(100% + rem(24));
-            height: calc(100% + rem(8));
-        }
     }
 
     & [type="submit"]{
@@ -46,7 +39,8 @@
         color: var(--white);
         line-height: 100%;
         font-size: rem(14);
-        line-height: rem(42);
+        height: rem(42);
+        line-height: normal;
 
         @include hover{
             opacity: .8;

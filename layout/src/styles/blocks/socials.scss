@@ -1,0 +1,36 @@
+@use '../helpers' as *;
+
+.socials{
+    & ul{
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+    }
+
+    & li{
+        &:not(:first-child){
+            margin-left: rem(16);
+        }
+    }
+
+    &__item{
+        @include square(rem(48));
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--grey);
+        border-radius: rem(4);
+        & svg{
+            @include square(rem(24));
+        }
+
+        @include hover{
+            opacity: .8;
+
+            & svg *{
+                fill: var(--blue)
+            }
+        }
+    }
+}
