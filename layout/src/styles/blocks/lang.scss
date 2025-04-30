@@ -1,5 +1,57 @@
 @use '../helpers' as *;
 
 .lang{
-    
+    margin-top: rem(12);
+    padding-left: rem(30);
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        top: rem(-2);
+        left: 0;
+
+        @include square(rem(24));
+        background-image: url(../../../public/svg/planet.svg);
+    }
+
+    & li{
+        &:not(:first-child){
+            margin-left: rem(9);
+
+            position: relative;
+            &::before{
+                content: '';
+                position: absolute;
+                top: rem(4);
+                left: rem(-4);
+
+                width: rem(1);
+                height: rem(12);
+
+                background-color: var(--dark);
+            }
+        }
+    }
+
+    &__item{
+        text-decoration: none;
+        color: var(--dark);
+        opacity: .4;
+
+        @include hover{
+            opacity: .8;
+        }
+
+        &.active{
+            opacity: 1;
+
+            @include hover{
+                opacity: .8;
+            }
+        }
+    }
 }
