@@ -1,0 +1,17 @@
+@use '../helpers' as *;
+
+.hero{
+    padding: rem(84) 0;
+
+    background: linear-gradient(135deg, #672870 20%, #4fe0ff 100%);
+
+    position: relative;
+    overflow: hidden;
+
+    &__images{
+        position: absolute;
+        top: rem(-100);
+        right: rem(-200);
+        width: rem(770);
+    }
+}

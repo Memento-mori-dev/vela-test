@@ -53,6 +53,30 @@
         margin-right: rem(10);
         display: flex;
     }
+
+    &_border{
+        border: 1px solid var(--border);
+    }
+
+    &_icon-single{
+        & svg{
+            @include square(rem(24));
+        }
+
+        @include hover{
+            opacity: .8;
+            background-color: var(--grey);
+
+            & svg *{
+                fill: var(--blue);
+            }
+        }
+        
+    }
+
+    &_t-blue{
+        color: var(--blue);
+    }
 }
 
 .button-menu{
@@ -102,7 +126,11 @@
     }
 
     &.open{
+        background-color: var(--grey);
+
         & span{
+            background-color: var(--dark);
+
             &:nth-child(1){
                 top: rem(24);
                 transform: rotate(45deg);

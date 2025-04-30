@@ -103,8 +103,29 @@
             }
         }
 
+        &-account{
+            grid-area: at;
+
+            & ul{
+                list-style-type: none;
+
+                display: flex;
+                align-items: center;
+            }
+
+            & li{
+                &:not(:first-child){
+                    margin-left: rem(16);
+                }
+            }
+        }
+
         &-tag{
             grid-area: tg;
+        }
+
+        &-pc{
+            grid-area: pc;
         }
     }
 }
