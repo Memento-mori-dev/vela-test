@@ -1,0 +1,17 @@
+@use '../helpers' as *;
+
+.tags{
+    & ul{
+        list-style-type: none;
+
+        display: flex;
+        align-items: center;
+    }
+
+    & li{
+        flex-grow: 1;
+    }
+    & li:not(:first-child){
+        margin-left: rem(19);
+    }
+}

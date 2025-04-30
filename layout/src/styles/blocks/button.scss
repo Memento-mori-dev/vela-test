@@ -1,0 +1,53 @@
+@use '../helpers' as *;
+
+.button{
+    border-radius: rem(4);
+    padding: rem(6);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    text-decoration: none;
+    background: none;
+    border: none;
+    &_blue{
+        background-color: var(--blue);
+        color: var(--white);
+
+        @include hover{
+            opacity: .8;
+        }
+    }
+    &_grey{
+        background-color: var(--grey);
+        color: var(--dark);
+
+        @include hover{
+            opacity: .8;
+
+            & svg *{
+                fill: var(--blue);
+            }
+        }
+    }
+
+    &_h-42{
+        height: rem(42);
+    }
+    &_h-48{
+        height: rem(48);
+    }
+
+    &_square{
+        aspect-ratio: 1;
+    }
+
+    &_icon{
+        @include square(20);
+
+        margin-top: rem(-2);
+        margin-right: rem(10);
+        display: flex;
+    }
+}
