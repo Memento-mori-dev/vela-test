@@ -52,8 +52,8 @@ svg *{
     transition-duration: var(--transition-duration);
 }
 
-:focus-visible{
-    outline: rem(2) dashed #000;
-    outline-offset: rem(4);
-    transition-duration: 0s !important;
-}
+// :focus-visible{
+//     outline: rem(2) dashed #000;
+//     outline-offset: rem(4);
+//     transition-duration: 0s !important;
+// }
