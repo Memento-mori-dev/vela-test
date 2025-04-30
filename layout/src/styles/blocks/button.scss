@@ -31,6 +31,14 @@
             }
         }
     }
+    &_white{
+        background-color: var(--white);
+        color: var(--purple);
+
+        @include hover{
+            opacity: .8;
+        }
+    }
 
     &_h-40{
         height: rem(40);
@@ -40,6 +48,13 @@
     }
     &_h-48{
         height: rem(48);
+    }
+    &_h-52{
+        height: rem(48);
+    }
+
+    &_w-150{
+        width: rem(150);
     }
 
     &_square{
