@@ -51,3 +51,66 @@
         display: flex;
     }
 }
+
+.button-menu{
+    border-radius: rem(4);
+    padding: rem(6);
+    width: rem(100);
+    height: rem(48);
+    background-color: var(--blue);
+    border: none;
+    position: relative;
+
+    & span{
+        transition: all var(--transition-duration);
+
+        &:nth-child(1){
+            position: absolute;
+            top: rem(16);
+            left: rem(30);
+            width: rem(38);
+            height: rem(2);
+            background-color: var(--white);
+            border-radius: rem(1);
+        }
+        &:nth-child(2){
+            position: absolute;
+            top: rem(23);
+            left: rem(30);
+            width: rem(24);
+            height: rem(2);
+            background-color: var(--white);
+            border-radius: rem(1);
+        }
+        &:nth-child(3){
+            position: absolute;
+            top: rem(30);
+            left: rem(30);
+            width: rem(38);
+            height: rem(2);
+            background-color: var(--white);
+            border-radius: rem(1);
+        }
+    }
+
+
+    @include hover{
+        opacity: .8;
+    }
+
+    &.open{
+        & span{
+            &:nth-child(1){
+                top: rem(24);
+                transform: rotate(45deg);
+            }
+            &:nth-child(2){
+                width: rem(0);
+            }
+            &:nth-child(3){
+                top: rem(23);
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}
