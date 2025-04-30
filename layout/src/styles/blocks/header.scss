@@ -1,0 +1,53 @@
+@use '../helpers' as *;
+
+.header{
+    &__promo{
+        padding: rem(8) 0;
+        background-color: var(--grey);
+
+        &-container{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &-address{
+            font-style: normal;
+            display: flex;
+            align-items: center;
+
+            & > *{
+                margin-left: rem(12);
+            }
+        }
+
+        &-time{
+            font-size: rem(14);
+            color: var(--dark);
+
+            & span{
+                padding-left: fluid(12, 10);
+            }
+        }
+
+        &-menu{
+            display: flex;
+            align-items: center;
+            list-style-type: none;
+
+            & li:not(:first-child){
+                margin-left: rem(16);
+            }
+
+            & a{
+                text-decoration: none;
+                color: var(--dark);
+                font-size: rem(14);
+
+                @include hover{
+                    color: var(--blue);
+                }
+            }
+        }
+    }
+}

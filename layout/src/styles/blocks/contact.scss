@@ -1,0 +1,26 @@
+@use '../helpers' as *;
+
+.contact{
+    font-size: rem(14);
+    color: var(--dark);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background: none;
+    border: none;
+
+    &__icon{
+        @include square(rem(16));
+
+        margin-top: rem(-2);
+        margin-right: rem(4);
+    }
+
+    @include hover{
+        color: var(--blue);
+
+        & svg *{
+            fill: var(--blue);
+        }
+    }
+}

@@ -1,5 +1,13 @@
 @use 'helpers' as *;
 
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
     @include fluid-text(18, 14);
 

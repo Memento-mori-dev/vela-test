@@ -2,14 +2,19 @@
 
 :root{
     // color
-
+    --white: #fff;
+    --grey:#F4F4F4;
+    --dark: #343A3F;
+    --blue: #4888FF;
+    --purple: #672870;
 
     // font
-    --font-family: '';
+    --font-family: "Maza", sans-serif;
+    --second-family: "Tenor Sans", sans-serif;
 
     // width and padding
-    --container-width: #{rem(1600)};
-    --container-padding-x: #{rem(1600)};
+    --container-width: #{rem(1400)};
+    --container-padding-x: #{rem(16)};
 
     // animation
     --transition-duration: .2s;
